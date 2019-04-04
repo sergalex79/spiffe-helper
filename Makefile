@@ -5,6 +5,9 @@ build:
 
 all: utils vendor build test
 
+install:
+	go install
+
 utils:
 	go get github.com/Masterminds/glide
 	go get github.com/goreleaser/goreleaser
