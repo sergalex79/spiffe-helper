@@ -4,9 +4,8 @@ export GO111MODULE=on
 .PHONY: all utils build test clean distclean
 
 build:
-	echo '$@ is ' $@
-	go install $@
-	cd $@; go build
+	go get -v ./...
+	go build
 
 all: utils vendor build test
 
