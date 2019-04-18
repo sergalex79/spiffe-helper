@@ -207,7 +207,7 @@ func (s *sidecar) writeKey(file string, data []byte) error {
 		Bytes: data,
 	}
 
-	f, err := os.OpenFile(file, os.O_WRONLY|os.O_CREATE|os.O_APPEND, keyFileMode)
+	f, err := os.OpenFile(file, os.O_WRONLY|os.O_CREATE, keyFileMode)
 	if err != nil {
 		return err
 	}
